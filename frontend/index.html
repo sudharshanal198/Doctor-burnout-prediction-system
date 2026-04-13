@@ -1,99 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Physician Burnout Monitoring Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <header class="topbar">
-    <div>
-      <h1>AI Physician Burnout Monitoring Dashboard</h1>
-      <p>Early Detection • Workload Balancing • Hospital Command View</p>
-    </div>
-    <div class="status-badge">System Active</div>
-  </header>
-
-  <main class="dashboard">
-    <section class="summary-grid">
-      <div class="card metric">
-        <h3>Doctors Monitored</h3>
-        <p id="totalDoctors">0</p>
-      </div>
-      <div class="card metric danger">
-        <h3>High Risk Doctors</h3>
-        <p id="highDoctors">0</p>
-      </div>
-      <div class="card metric warning">
-        <h3>Moderate Risk Doctors</h3>
-        <p id="moderateDoctors">0</p>
-      </div>
-      <div class="card metric safe">
-        <h3>Low Risk Doctors</h3>
-        <p id="lowDoctors">0</p>
-      </div>
-    </section>
-    <section class="grid-two">
-      <div class="card">
-        <h2>Burnout Distribution</h2>
-        <canvas id="riskChart"></canvas>
-      </div>
-      <div class="card">
-        <h2>4-Week Burnout Trend</h2>
-        <canvas id="trendChart"></canvas>
-      </div>
-    </section>
-    <section class="card">
-      <h2>Doctor Burnout Prediction</h2>
-      <div class="form-grid">
-        <input id="doctor_id" placeholder="Doctor ID" />
-
-        <select id="department">
-          <option value="0">Emergency</option>
-          <option value="1">ICU</option>
-          <option value="2">Surgery</option>
-          <option value="3">OPD</option>
-          <option value="4">Pediatrics</option>
-          <option value="5">General Medicine</option>
-        </select>
-
-        <select id="hospital_type">
-          <option value="0">Government</option>
-          <option value="1">Private</option>
-        </select>
-
-        <select id="shift_type">
-          <option value="0">Day</option>
-          <option value="1">Night</option>
-        </select>
-
-        <input id="experience_years" type="number" placeholder="Experience Years" />
-        <input id="work_hours" type="number" placeholder="Work Hours" />
-        <input id="patients_per_day" type="number" placeholder="Patients Per Day" />
-        <input id="after_hours_logins" type="number" placeholder="After-Hours Logins" />
-        <input id="night_shifts" type="number" placeholder="Night Shifts" />
-        <input id="consecutive_days" type="number" placeholder="Consecutive Duty Days" />
-        <input id="documentation_delay" type="number" placeholder="Documentation Delay" />
-        <input id="stress_level" type="number" placeholder="Stress Level" />
-        <input id="job_satisfaction" type="number" placeholder="Job Satisfaction" />
-        <input id="sleep_hours" type="number" placeholder="Sleep Hours" />
-      </div>
-
-      <button class="primary-btn" onclick="predictDoctor()">Predict Burnout Risk</button>
-
-      <div class="result-box">
-        <h3>Prediction Result</h3>
-        <p><strong>Doctor ID:</strong> <span id="resultDoctor">-</span></p>
-        <p><strong>Risk Score:</strong> <span id="riskScore">-</span></p>
-        <p><strong>Risk Level:</strong> <span id="riskLevel">-</span></p>
-        <div>
-          <strong>Recommendations:</strong>
-          <ul id="recommendationsList"></ul>
-        </div>
-      </div>
-    </section>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
